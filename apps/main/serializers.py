@@ -52,7 +52,6 @@ class CourseFAQSerializer(serializers.ModelSerializer):
         fields = ['id', 'question', 'answer']
 
 class NestedCourseSerializer(serializers.ModelSerializer):
-    """Вложенный сериализатор для отображения всех курсов внутри основного курса."""
     class Meta:
         model = Course
         fields = ['id', 'title', 'month_period', 'is_modern']
